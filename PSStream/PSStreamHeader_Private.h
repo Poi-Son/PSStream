@@ -19,3 +19,7 @@
 #import "PSStreamSelectAction.h"
 #import "PSStreamAction.h"
 #import "convenientmacros.h"
+
+@interface PSStream (Private)
+- (instancetype)_init;
+@end

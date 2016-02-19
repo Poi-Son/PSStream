@@ -21,15 +21,16 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		5D0C09781C776B1E0025F356 /* PSStreamDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D0C09771C776B1E0025F356 /* PSStreamDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5D0C0AAB1C7774660025F356 /* PSStreamAction.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D0C0AA91C7774660025F356 /* PSStreamAction.h */; };
+		5D0C0AAC1C7774660025F356 /* PSStreamAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0C0AAA1C7774660025F356 /* PSStreamAction.m */; };
 		5DE522B71C5CC6A9000FA850 /* PSStream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DE522AC1C5CC6A9000FA850 /* PSStream.framework */; };
-		5DE522BC1C5CC6A9000FA850 /* PSStreamTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DE522BB1C5CC6A9000FA850 /* PSStreamTests.m */; };
+		5DE522BC1C5CC6A9000FA850 /* PSStream.test.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DE522BB1C5CC6A9000FA850 /* PSStream.test.m */; };
 		5DE522DB1C5CC72C000FA850 /* PSStreamSelectAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DE522C81C5CC72C000FA850 /* PSStreamSelectAction.m */; };
 		5DE522DD1C5CC72C000FA850 /* PSStreamWhereAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DE522CA1C5CC72C000FA850 /* PSStreamWhereAction.m */; };
-		5DE522DE1C5CC72C000FA850 /* convenientmacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 5DE522CC1C5CC72C000FA850 /* convenientmacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5DE522DF1C5CC72C000FA850 /* metamacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 5DE522CD1C5CC72C000FA850 /* metamacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5DE522E01C5CC72C000FA850 /* PSStream.h in Headers */ = {isa = PBXBuildFile; fileRef = 5DE522CE1C5CC72C000FA850 /* PSStream.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5DE522E11C5CC72C000FA850 /* PSStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DE522CF1C5CC72C000FA850 /* PSStream.m */; };
-		5DE522E31C5CC72C000FA850 /* PSStreamAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DE522D11C5CC72C000FA850 /* PSStreamAction.m */; };
 		5DE522E51C5CC72C000FA850 /* PSStreamTuple.h in Headers */ = {isa = PBXBuildFile; fileRef = 5DE522D31C5CC72C000FA850 /* PSStreamTuple.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5DE522E61C5CC72C000FA850 /* PSStreamTuple.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DE522D41C5CC72C000FA850 /* PSStreamTuple.m */; };
 		5DE522E81C5CC72C000FA850 /* PSArrayStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DE522D71C5CC72C000FA850 /* PSArrayStream.m */; };
@@ -49,10 +50,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5D0C09771C776B1E0025F356 /* PSStreamDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSStreamDefines.h; sourceTree = "<group>"; };
+		5D0C0AA91C7774660025F356 /* PSStreamAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSStreamAction.h; sourceTree = "<group>"; };
+		5D0C0AAA1C7774660025F356 /* PSStreamAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSStreamAction.m; sourceTree = "<group>"; };
 		5DE522AC1C5CC6A9000FA850 /* PSStream.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PSStream.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DE522B11C5CC6A9000FA850 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5DE522B61C5CC6A9000FA850 /* PSStreamTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PSStreamTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5DE522BB1C5CC6A9000FA850 /* PSStreamTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PSStreamTests.m; sourceTree = "<group>"; };
+		5DE522BB1C5CC6A9000FA850 /* PSStream.test.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PSStream.test.m; sourceTree = "<group>"; };
 		5DE522BD1C5CC6A9000FA850 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5DE522C71C5CC72C000FA850 /* PSStreamSelectAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSStreamSelectAction.h; sourceTree = "<group>"; };
 		5DE522C81C5CC72C000FA850 /* PSStreamSelectAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSStreamSelectAction.m; sourceTree = "<group>"; };
@@ -62,8 +66,6 @@
 		5DE522CD1C5CC72C000FA850 /* metamacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = metamacros.h; sourceTree = "<group>"; };
 		5DE522CE1C5CC72C000FA850 /* PSStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSStream.h; sourceTree = "<group>"; };
 		5DE522CF1C5CC72C000FA850 /* PSStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSStream.m; sourceTree = "<group>"; };
-		5DE522D01C5CC72C000FA850 /* PSStreamAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSStreamAction.h; sourceTree = "<group>"; };
-		5DE522D11C5CC72C000FA850 /* PSStreamAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSStreamAction.m; sourceTree = "<group>"; };
 		5DE522D21C5CC72C000FA850 /* PSStreamHeader_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSStreamHeader_Private.h; sourceTree = "<group>"; };
 		5DE522D31C5CC72C000FA850 /* PSStreamTuple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSStreamTuple.h; sourceTree = "<group>"; };
 		5DE522D41C5CC72C000FA850 /* PSStreamTuple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSStreamTuple.m; sourceTree = "<group>"; };
@@ -119,14 +121,13 @@
 			children = (
 				5DE522C61C5CC72C000FA850 /* Actions */,
 				5DE522CB1C5CC72C000FA850 /* macros */,
+				5DE522D51C5CC72C000FA850 /* Streams */,
 				5DE522CE1C5CC72C000FA850 /* PSStream.h */,
 				5DE522CF1C5CC72C000FA850 /* PSStream.m */,
-				5DE522D01C5CC72C000FA850 /* PSStreamAction.h */,
-				5DE522D11C5CC72C000FA850 /* PSStreamAction.m */,
+				5D0C09771C776B1E0025F356 /* PSStreamDefines.h */,
 				5DE522D21C5CC72C000FA850 /* PSStreamHeader_Private.h */,
 				5DE522D31C5CC72C000FA850 /* PSStreamTuple.h */,
 				5DE522D41C5CC72C000FA850 /* PSStreamTuple.m */,
-				5DE522D51C5CC72C000FA850 /* Streams */,
 				5DE522B11C5CC6A9000FA850 /* Info.plist */,
 			);
 			path = PSStream;
@@ -136,7 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				5DE522EB1C5CC9A0000FA850 /* Model */,
-				5DE522BB1C5CC6A9000FA850 /* PSStreamTests.m */,
+				5DE522BB1C5CC6A9000FA850 /* PSStream.test.m */,
 				5DE522BD1C5CC6A9000FA850 /* Info.plist */,
 			);
 			path = PSStreamTests;
@@ -145,6 +146,8 @@
 		5DE522C61C5CC72C000FA850 /* Actions */ = {
 			isa = PBXGroup;
 			children = (
+				5D0C0AA91C7774660025F356 /* PSStreamAction.h */,
+				5D0C0AAA1C7774660025F356 /* PSStreamAction.m */,
 				5DE522C71C5CC72C000FA850 /* PSStreamSelectAction.h */,
 				5DE522C81C5CC72C000FA850 /* PSStreamSelectAction.m */,
 				5DE522C91C5CC72C000FA850 /* PSStreamWhereAction.h */,
@@ -191,9 +194,10 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D0C0AAB1C7774660025F356 /* PSStreamAction.h in Headers */,
 				5DE522DF1C5CC72C000FA850 /* metamacros.h in Headers */,
 				5DE522E01C5CC72C000FA850 /* PSStream.h in Headers */,
-				5DE522DE1C5CC72C000FA850 /* convenientmacros.h in Headers */,
+				5D0C09781C776B1E0025F356 /* PSStreamDefines.h in Headers */,
 				5DE522E51C5CC72C000FA850 /* PSStreamTuple.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -316,11 +320,11 @@
 			files = (
 				5DE522E61C5CC72C000FA850 /* PSStreamTuple.m in Sources */,
 				5DE522EA1C5CC72C000FA850 /* PSDictionaryStream.m in Sources */,
-				5DE522E31C5CC72C000FA850 /* PSStreamAction.m in Sources */,
 				5DE522E81C5CC72C000FA850 /* PSArrayStream.m in Sources */,
 				5DE522DD1C5CC72C000FA850 /* PSStreamWhereAction.m in Sources */,
 				5DE522DB1C5CC72C000FA850 /* PSStreamSelectAction.m in Sources */,
 				5DE522E11C5CC72C000FA850 /* PSStream.m in Sources */,
+				5D0C0AAC1C7774660025F356 /* PSStreamAction.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,7 +333,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5DE522F11C5CC9A0000FA850 /* Teacher.m in Sources */,
-				5DE522BC1C5CC6A9000FA850 /* PSStreamTests.m in Sources */,
+				5DE522BC1C5CC6A9000FA850 /* PSStream.test.m in Sources */,
 				5DE522F01C5CC9A0000FA850 /* Student.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,7 +10,7 @@
 
 @implementation PSArrayStream
 - (instancetype)initWithDatasource:(id<NSFastEnumeration>)datasource{
-    if (self = [super init]) {
+    if (self = [super _init]) {
         NSMutableArray<PSStreamTuple *> *array = [NSMutableArray new];
         for (id object in datasource) {
             [array addObject:PSArrayTuple(object)];

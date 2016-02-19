@@ -30,15 +30,15 @@
 
 @implementation PSStream
 
-- (instancetype)init{
-    return self = [super init];
-}
-
 - (instancetype)initWithDatasource:(NSArray *)datasource{
     if (self = [super init]) {
         _stream = datasource;
     }
     return self;
+}
+
+- (instancetype)_init{
+    return self = [super init];
 }
 
 - (id)objectAtIndexedSubscript:(NSUInteger)idx{

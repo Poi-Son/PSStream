@@ -7,6 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <PSStream/PSStreamDefines.h>
+#import <PSStream/PSStreamTuple.h>
+#import <PSStream/metamacros.h>
+
 @class PSStreamTuple;
 NS_ASSUME_NONNULL_BEGIN
 /**
@@ -15,6 +19,9 @@ NS_ASSUME_NONNULL_BEGIN
 @interface PSStream : NSObject<NSFastEnumeration>{
     NSArray<PSStreamTuple *> *_stream;
 }
+- (instancetype)init PSSTREAM_API_UNAVAILABLE("不允许直接实例化");
++ (instancetype)new PSSTREAM_API_UNAVAILABLE("不允许直接实例化");
+
 - (instancetype)initWithDatasource:(id<NSFastEnumeration>)datasource;
 
 - (id)objectAtIndexedSubscript:(NSUInteger)idx;

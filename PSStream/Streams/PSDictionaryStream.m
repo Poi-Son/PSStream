@@ -11,7 +11,7 @@
 @implementation PSDictionaryStream
 
 - (instancetype)initWithDatasource:(NSDictionary *)datasource{
-    if (self = [super init]) {
+    if (self = [super _init]) {
         NSMutableArray<PSStreamTuple *> *array = [NSMutableArray new];
         for (id key in datasource) {
             [array addObject:PSArrayTuple(key, datasource[key])];
