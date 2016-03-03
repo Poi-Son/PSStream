@@ -110,6 +110,24 @@
         return [e isKindOfClass:type];
     }];
 }
+
+- (PSStream *(^)(BOOL (^)(id e)))where{
+    return ^(BOOL (^block)(id)){
+        return [self where:block];
+    };
+}
+
+- (PSStream *(^)(id (^)(id e)))select{
+    return ^(id(^block)(id)){
+        return [self select:block];
+    };
+}
+
+- (PSStream *(^)(Class))ofType{
+    return ^(Class class){
+        return [self ofType:class];
+    };
+}
 @end
 @implementation PSStream (Range)
 - (PSStream *)skip:(NSUInteger)skip{
@@ -150,7 +168,38 @@
     [self doAction:nil];
     return _stream.count;
 }
+
+- (PSStream *(^)(NSUInteger))skip{
+    return ^(NSUInteger skip){
+        return [self skip:skip];
+    };
+}
+
+- (PSStream *(^)(BOOL (^)(id e)))skipWhile{
+    return ^(BOOL (^block)(id)){
+        return [self skipWhile:block];
+    };
+}
+
+- (PSStream *(^)(NSUInteger))take{
+    return ^(NSUInteger take){
+        return [self take:take];
+    };
+}
+
+- (PSStream *(^)(BOOL (^)(id e)))takeWhile{
+    return ^(BOOL (^block)(id)){
+        return [self takeWhile:block];
+    };
+}
+
+- (PSStream *(^)(NSUInteger, NSUInteger))rangeOf{
+    return ^(NSUInteger skip, NSUInteger take){
+        return [self rangeOfSkip:skip take:take];
+    };
+}
 @end
+
 @implementation PSStream (Operation)
 - (id)first{
     [self doAction:nil];
@@ -228,6 +277,12 @@
     }
     _stream = array;
     return self;
+}
+
+- (PSStream *(^)(NSComparator))orderBy{
+    return ^(NSComparator cmptr){
+        return [self orderBy:cmptr];
+    };
 }
 @end
 @implementation PSStream (Statistics)
@@ -371,6 +426,12 @@
         [dic setObject:value forKey:key];
     }];
     return dic;
+}
+
+- (NSDictionary *(^)(PSStreamTuple *(^)(id)))dictionary{
+    return ^(id (^block)(id)){
+        return [self dictionary:block];
+    };
 }
 
 - (NSArray *)array{

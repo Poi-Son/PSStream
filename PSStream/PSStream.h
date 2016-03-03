@@ -34,6 +34,10 @@ NS_ASSUME_NONNULL_BEGIN
 - (PSStream *)where:(BOOL (^)(id e))condition;/**< 筛选指定条件的元素 */
 - (PSStream *)select:(id (^)(id e))select;/**< 将集合中的每个元素投影到新的集合中 */
 - (PSStream *)ofType:(Class)type;/**< 筛选指定类型的元素 */
+
+- (PSStream *(^)(BOOL (^)(id e)))where;
+- (PSStream *(^)(id (^)(id e)))select;
+- (PSStream *(^)(Class))ofType;
 @end
 
 /**
@@ -46,6 +50,12 @@ NS_ASSUME_NONNULL_BEGIN
 - (PSStream *)takeWhile:(BOOL (^)(id e))take;/**< 取元素, 直到满足条件 */
 - (PSStream *)rangeOfSkip:(NSUInteger)skip take:(NSUInteger)take;/**< 取范围里的元素 */
 - (NSUInteger)count;/**< 集合个数 */
+
+- (PSStream *(^)(NSUInteger))skip;
+- (PSStream *(^)(BOOL (^)(id e)))skipWhile;
+- (PSStream *(^)(NSUInteger))take;
+- (PSStream *(^)(BOOL (^)(id e)))takeWhile;
+- (PSStream *(^)(NSUInteger, NSUInteger))rangeOf;
 @end
 
 /**
@@ -62,6 +72,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)foreach:(void (^)(id e, NSUInteger idx, BOOL *stop))foreach;/**< 遍历元素 */
 - (PSStream *)distinct;/**< 去除重复项 */
 - (PSStream *)reverse;/**< 反序 */
+
+- (PSStream *(^)(NSComparator))orderBy;
 @end
 
 /**
@@ -79,6 +91,8 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @interface PSStream (Convert)
 - (NSDictionary *)dictionary:(id(^)(id e))dictionary;/**< return PSArray(key, value); */
+- (NSDictionary *(^)(PSStreamTuple *(^)(id)))dictionary;
+
 - (NSArray *)array;
 - (NSSet *)set;
 @end

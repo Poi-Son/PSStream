@@ -21,6 +21,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		1D76ADD31C87F3CA0047014E /* chain.test.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D76ADD21C87F3CA0047014E /* chain.test.m */; };
 		5D0C09781C776B1E0025F356 /* PSStreamDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D0C09771C776B1E0025F356 /* PSStreamDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5D0C0AAB1C7774660025F356 /* PSStreamAction.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D0C0AA91C7774660025F356 /* PSStreamAction.h */; };
 		5D0C0AAC1C7774660025F356 /* PSStreamAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0C0AAA1C7774660025F356 /* PSStreamAction.m */; };
@@ -50,6 +51,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1D76ADD21C87F3CA0047014E /* chain.test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = chain.test.m; sourceTree = "<group>"; };
 		5D0C09771C776B1E0025F356 /* PSStreamDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSStreamDefines.h; sourceTree = "<group>"; };
 		5D0C0AA91C7774660025F356 /* PSStreamAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSStreamAction.h; sourceTree = "<group>"; };
 		5D0C0AAA1C7774660025F356 /* PSStreamAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSStreamAction.m; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 				5DE522EB1C5CC9A0000FA850 /* Model */,
 				5DE522BB1C5CC6A9000FA850 /* PSStream.test.m */,
 				5DE522BD1C5CC6A9000FA850 /* Info.plist */,
+				1D76ADD21C87F3CA0047014E /* chain.test.m */,
 			);
 			path = PSStreamTests;
 			sourceTree = "<group>";
@@ -333,6 +336,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5DE522F11C5CC9A0000FA850 /* Teacher.m in Sources */,
+				1D76ADD31C87F3CA0047014E /* chain.test.m in Sources */,
 				5DE522BC1C5CC6A9000FA850 /* PSStream.test.m in Sources */,
 				5DE522F01C5CC9A0000FA850 /* Student.m in Sources */,
 			);
