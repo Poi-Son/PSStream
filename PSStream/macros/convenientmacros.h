@@ -15,23 +15,10 @@
 
 
 #define doIf(condition, action) \
-    do {                         \
-        if(!!(condition)){        \
-        action;                \
-        }                         \
+    do { \
+        if(!!(condition)){ \
+        action; \
+        } \
     } while(0)
-
-//消除[NSObject performSelector:]引起的警告
-#define SuppressPerformSelectorLeakWarning(action)                        \
-    do {                                                                   \
-        _Pragma("clang diagnostic push")                                    \
-        _Pragma("clang diagnostic ignored \"-Warc-performSelector-leaks\"") \
-        action;                                                             \
-        _Pragma("clang diagnostic pop")                                     \
-    } while (0)
-
-#define PSEnumOption(enum, value, comment) enum = value
-#define PSExternString(key, comment) FOUNDATION_EXPORT NSString * const _Nonnull key;
-#define PSExternStringVal(key, val) NSString * const key = val;
 
 #endif

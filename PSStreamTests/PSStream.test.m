@@ -51,11 +51,6 @@
     }
 }
 
-- (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
-    [super tearDown];
-}
-
 - (void)testWhere{
     NSArray *sunStu = [[self.data.ps_stream where:^BOOL(id  _Nonnull e) {
         return [[e name] hasSuffix:@"孙"];
@@ -80,6 +75,14 @@
     for (id obj in teas) {
         XCTAssert([obj isKindOfClass:[Teacher class]]);
     }
+}
+
+- (void)testGroupBy{
+    NSArray *groups = [self.data.ps_stream groupBy:^id _Nonnull(id  _Nonnull e) {
+        return [[e name] substringWithRange:NSMakeRange(0, 1)];
+    }].array;
+    
+    XCTAssert(groups.count == 4);
 }
 
 - (void)testRange{

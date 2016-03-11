@@ -34,10 +34,12 @@ NS_ASSUME_NONNULL_BEGIN
 - (PSStream *)where:(BOOL (^)(id e))condition;/**< 筛选指定条件的元素 */
 - (PSStream *)select:(id (^)(id e))select;/**< 将集合中的每个元素投影到新的集合中 */
 - (PSStream *)ofType:(Class)type;/**< 筛选指定类型的元素 */
+- (PSStream *)groupBy:(id (^)(id e))groupCondition;
 
 - (PSStream *(^)(BOOL (^)(id e)))where;
 - (PSStream *(^)(id (^)(id e)))select;
 - (PSStream *(^)(Class))ofType;
+- (PSStream *(^)(id (^)(id e)))groupBy;
 @end
 
 /**

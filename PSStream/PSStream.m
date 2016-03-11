@@ -111,6 +111,20 @@
     }];
 }
 
+- (PSStream *)groupBy:(id (^)(id))groupCondition{
+    NSMutableDictionary *dic = [NSMutableDictionary new];
+    [self doAction:^(PSStreamTuple *tuple, BOOL *stop) {
+        id key = groupCondition(tuple.actualValue);
+        NSMutableArray *group = [dic objectForKey:key];
+        if (group == nil) {
+            group = [NSMutableArray new];
+            [dic setObject:group forKey:key];
+        }
+        [group addObject:tuple.actualValue];
+    }];
+    _stream = dic.ps_stream->_stream;
+    return self;
+}
 - (PSStream *(^)(BOOL (^)(id e)))where{
     return ^(BOOL (^block)(id)){
         return [self where:block];
@@ -126,6 +140,12 @@
 - (PSStream *(^)(Class))ofType{
     return ^(Class class){
         return [self ofType:class];
+    };
+}
+
+- (PSStream *(^)(id (^)(id)))groupBy{
+    return ^(id(^block)(id)){
+        return [self groupBy:block];
     };
 }
 @end
