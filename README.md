@@ -1,7 +1,24 @@
-# [PSStream](http://yerl.cn/blog/PSStream)
-##集成
+# PSStream
 
-1. 将PSStream.framework复制到你的项目下，在`Linked Frameworks and Libraries`添加framework引用。
-2. 打开Build Settings，`Other Linker Flags`添加`-ObjC`。
+## Usage
 
-　　Enjoy yourself!
+To run the example project, clone the repo, and run `pod install` from the Example directory first. [See more details.](http://yerl.cn/blog/PSStream)
+
+## Requirements
+
+## Installation
+
+PSStream is available through [CocoaPods](http://cocoapods.org). To install
+it, simply add the following line to your Podfile:
+
+```ruby
+pod "PSStream"
+```
+
+## Author
+
+PoiSon, git@yerl.cn
+
+## License
+
+PSStream is available under the MIT license. See the LICENSE file for more info.

@@ -1,0 +1,6 @@
+framework module PSStream {
+  umbrella header "PSStream-umbrella.h"
+
+  export *
+  module * { export * }
+}

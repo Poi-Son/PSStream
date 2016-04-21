@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'PSStream_Example', :exclusive => true do
+  pod 'PSStream', :path => '../'
+end
+
+target 'PSStream_Tests', :exclusive => true do
+  pod 'PSStream', :path => '../'
+
+  
+end
