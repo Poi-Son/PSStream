@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = "PSStream"
   s.version          = "1.0.0"
-  s.summary          = "A short description of PSStream."
+  s.summary          = "PSStream."
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-  集合流式处理框架
+  集合流式处理框架，延时处理集合
                        DESC
 
   s.homepage         = "https://github.com/Poi-Son/PSStream"
@@ -30,7 +30,4 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'PSStream/Classes/**/*'
-  s.resource_bundles = {
-    'PSStream' => ['PSStream/Assets/*.png']
-  }
 end
