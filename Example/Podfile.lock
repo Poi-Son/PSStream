@@ -1,5 +1,5 @@
 PODS:
-  - PSStream (1.0.0)
+  - PSStream (1.0.1)
 
 DEPENDENCIES:
   - PSStream (from `../`)
@@ -9,6 +9,8 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  PSStream: b8fcf0ef4e41332c1a9e88b08dc3ed5e08ff6506
+  PSStream: 6c59fdb0fe32a9940fa3f95b5790d46a3176b419
 
-COCOAPODS: 0.39.0
+PODFILE CHECKSUM: 914ff014ea664ef11d1f10795966e051d29d85fa
+
+COCOAPODS: 1.0.0

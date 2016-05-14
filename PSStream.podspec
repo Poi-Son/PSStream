@@ -30,4 +30,5 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'PSStream/Classes/**/*'
+  s.public_header_files = 'PSStream/Classes/{PSStream,PSStreamDefines,PSStreamTuple}.h', 'PSStream/Classes/macros/metamacros.h'
 end

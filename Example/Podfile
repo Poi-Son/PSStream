@@ -1,11 +1,9 @@
 use_frameworks!
 
-target 'PSStream_Example', :exclusive => true do
-  pod 'PSStream', :path => '../'
-end
-
-target 'PSStream_Tests', :exclusive => true do
+target 'PSStream_Example' do
   pod 'PSStream', :path => '../'
 
-  
+  target 'PSStream_Tests' do
+    inherit! :search_paths 
+  end
 end
