@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "PSStream"
-  s.version          = "1.0.1"
+  s.version          = "1.0.2"
   s.summary          = "PSStream."
 
 # This description is used to generate tags and improve search results.
@@ -21,11 +21,11 @@ Pod::Spec.new do |s|
   集合流式处理框架，延时处理集合
                        DESC
 
-  s.homepage         = "https://github.com/Poi-Son/PSStream"
+  s.homepage         = "https://github.com/alan-yeh/PSStream"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
-  s.author           = { "PoiSon" => "git@yerl.cn" }
-  s.source           = { :git => "https://github.com/Poi-Son/PSStream.git", :tag => s.version.to_s }
+  s.author           = { "Alan Yeh" => "git@yerl.cn" }
+  s.source           = { :git => "https://github.com/alan-yeh/PSStream.git", :tag => s.version.to_s }
 
   s.ios.deployment_target = '8.0'
 
